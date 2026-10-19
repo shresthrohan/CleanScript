@@ -1,8 +1,5 @@
 # CleanScript: a data cleaning script compiler
-
-<video src="brag.mp4" controls muted width="100%"></video>
-
-[Watch the demo video](brag.mp4)
+https://github.com/user-attachments/assets/bee2c4cf-b1da-46b9-b4bb-6b0e8e2ed07a
 
 CleanScript is a small domain-specific language for cleaning CSV datasets, plus a real compiler for it and a web app to demonstrate it.
 You upload a CSV and write a program like the one below. The program goes through a lexer, a recursive-descent parser, a dataset-aware semantic analyzer, IR generation and Pandas code generation. A restricted interpreter then runs the validated IR on a copy of your data, and you download the cleaned CSV.
