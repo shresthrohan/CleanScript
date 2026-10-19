@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+
+# Node
+node_modules/
+frontend/dist/
+
+# Tooling / local artefacts
+.playwright-mcp/
+*.log
+.DS_Store
+Thumbs.db
+
+#claudemd
+Claude.md
+CLAUDE.md
+
+# local-only docs and output
+docs/PRESENTATION_SCRIPT.md
+docs/PROJECT_REPORT.md
+brag-output/
+docs/DEMO_SCRIPT.md

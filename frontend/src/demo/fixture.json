@@ -1,0 +1,963 @@
+{
+ "note": "Recorded from a real backend run by backend/scripts/record_demo_fixture.py. Demo mode only.",
+ "recorded_at": "2026-10-12T19:12:14+00:00",
+ "source": "LOAD \"students.csv\";\nFILL_NULLS AGE USING MEDIAN;\nFILL_NULLS MARKS USING MEAN;\nREMOVE_DUPLICATES;\nFILTER AGE >= 18;\nNORMALIZE MARKS;\nSORT MARKS DESC;\nSAVE \"cleaned_students.csv\";\n",
+ "upload": {
+  "session_id": "gcQjGYDoSqNk5ZFyxHnDQMCK",
+  "filename": "students.csv",
+  "profile": {
+   "rows": 6,
+   "columns": 3,
+   "schema": [
+    {
+     "name": "STUDENT_NAME",
+     "type": "string",
+     "dtype": "string",
+     "missing": 0,
+     "missing_pct": 0.0,
+     "unique": 5,
+     "stats": null
+    },
+    {
+     "name": "AGE",
+     "type": "integer",
+     "dtype": "Int64",
+     "missing": 1,
+     "missing_pct": 16.67,
+     "unique": 4,
+     "stats": {
+      "min": 17,
+      "max": 22,
+      "mean": 19.6,
+      "median": 20.0
+     }
+    },
+    {
+     "name": "MARKS",
+     "type": "integer",
+     "dtype": "Int64",
+     "missing": 1,
+     "missing_pct": 16.67,
+     "unique": 4,
+     "stats": {
+      "min": 75,
+      "max": 95,
+      "mean": 86.0,
+      "median": 85.0
+     }
+    }
+   ],
+   "missing_cells": 2,
+   "duplicate_rows": 1,
+   "warnings": [],
+   "preview": {
+    "columns": [
+     "STUDENT_NAME",
+     "AGE",
+     "MARKS"
+    ],
+    "rows": [
+     [
+      "Aarav",
+      20,
+      85
+     ],
+     [
+      "Diya",
+      19,
+      90
+     ],
+     [
+      "Rohan",
+      null,
+      75
+     ],
+     [
+      "Aarav",
+      20,
+      85
+     ],
+     [
+      "Meera",
+      17,
+      95
+     ],
+     [
+      "Kabir",
+      22,
+      null
+     ]
+    ],
+    "total_rows": 6,
+    "truncated": false
+   }
+  },
+  "limits": {
+   "preview_rows": 50,
+   "max_source_chars": 20000
+  }
+ },
+ "compile": {
+  "compilation_id": "54xewxY-a8RdF7nL",
+  "session_id": "gcQjGYDoSqNk5ZFyxHnDQMCK",
+  "status": "success",
+  "stages": {
+   "lexer": "passed",
+   "parser": "passed",
+   "semantic": "passed",
+   "ir": "passed",
+   "codegen": "passed"
+  },
+  "tokens": [
+   {
+    "type": "LOAD",
+    "category": "KEYWORD",
+    "lexeme": "LOAD",
+    "value": "LOAD",
+    "line": 1,
+    "column": 1,
+    "end_column": 5
+   },
+   {
+    "type": "STRING",
+    "category": "STRING",
+    "lexeme": "\"students.csv\"",
+    "value": "students.csv",
+    "line": 1,
+    "column": 6,
+    "end_column": 20
+   },
+   {
+    "type": "SEMICOLON",
+    "category": "SEMICOLON",
+    "lexeme": ";",
+    "value": null,
+    "line": 1,
+    "column": 20,
+    "end_column": 21
+   },
+   {
+    "type": "FILL_NULLS",
+    "category": "KEYWORD",
+    "lexeme": "FILL_NULLS",
+    "value": "FILL_NULLS",
+    "line": 2,
+    "column": 1,
+    "end_column": 11
+   },
+   {
+    "type": "IDENTIFIER",
+    "category": "IDENTIFIER",
+    "lexeme": "AGE",
+    "value": "AGE",
+    "line": 2,
+    "column": 12,
+    "end_column": 15
+   },
+   {
+    "type": "USING",
+    "category": "KEYWORD",
+    "lexeme": "USING",
+    "value": "USING",
+    "line": 2,
+    "column": 16,
+    "end_column": 21
+   },
+   {
+    "type": "MEDIAN",
+    "category": "KEYWORD",
+    "lexeme": "MEDIAN",
+    "value": "MEDIAN",
+    "line": 2,
+    "column": 22,
+    "end_column": 28
+   },
+   {
+    "type": "SEMICOLON",
+    "category": "SEMICOLON",
+    "lexeme": ";",
+    "value": null,
+    "line": 2,
+    "column": 28,
+    "end_column": 29
+   },
+   {
+    "type": "FILL_NULLS",
+    "category": "KEYWORD",
+    "lexeme": "FILL_NULLS",
+    "value": "FILL_NULLS",
+    "line": 3,
+    "column": 1,
+    "end_column": 11
+   },
+   {
+    "type": "IDENTIFIER",
+    "category": "IDENTIFIER",
+    "lexeme": "MARKS",
+    "value": "MARKS",
+    "line": 3,
+    "column": 12,
+    "end_column": 17
+   },
+   {
+    "type": "USING",
+    "category": "KEYWORD",
+    "lexeme": "USING",
+    "value": "USING",
+    "line": 3,
+    "column": 18,
+    "end_column": 23
+   },
+   {
+    "type": "MEAN",
+    "category": "KEYWORD",
+    "lexeme": "MEAN",
+    "value": "MEAN",
+    "line": 3,
+    "column": 24,
+    "end_column": 28
+   },
+   {
+    "type": "SEMICOLON",
+    "category": "SEMICOLON",
+    "lexeme": ";",
+    "value": null,
+    "line": 3,
+    "column": 28,
+    "end_column": 29
+   },
+   {
+    "type": "REMOVE_DUPLICATES",
+    "category": "KEYWORD",
+    "lexeme": "REMOVE_DUPLICATES",
+    "value": "REMOVE_DUPLICATES",
+    "line": 4,
+    "column": 1,
+    "end_column": 18
+   },
+   {
+    "type": "SEMICOLON",
+    "category": "SEMICOLON",
+    "lexeme": ";",
+    "value": null,
+    "line": 4,
+    "column": 18,
+    "end_column": 19
+   },
+   {
+    "type": "FILTER",
+    "category": "KEYWORD",
+    "lexeme": "FILTER",
+    "value": "FILTER",
+    "line": 5,
+    "column": 1,
+    "end_column": 7
+   },
+   {
+    "type": "IDENTIFIER",
+    "category": "IDENTIFIER",
+    "lexeme": "AGE",
+    "value": "AGE",
+    "line": 5,
+    "column": 8,
+    "end_column": 11
+   },
+   {
+    "type": "GTE",
+    "category": "OPERATOR",
+    "lexeme": ">=",
+    "value": null,
+    "line": 5,
+    "column": 12,
+    "end_column": 14
+   },
+   {
+    "type": "NUMBER",
+    "category": "NUMBER",
+    "lexeme": "18",
+    "value": 18,
+    "line": 5,
+    "column": 15,
+    "end_column": 17
+   },
+   {
+    "type": "SEMICOLON",
+    "category": "SEMICOLON",
+    "lexeme": ";",
+    "value": null,
+    "line": 5,
+    "column": 17,
+    "end_column": 18
+   },
+   {
+    "type": "NORMALIZE",
+    "category": "KEYWORD",
+    "lexeme": "NORMALIZE",
+    "value": "NORMALIZE",
+    "line": 6,
+    "column": 1,
+    "end_column": 10
+   },
+   {
+    "type": "IDENTIFIER",
+    "category": "IDENTIFIER",
+    "lexeme": "MARKS",
+    "value": "MARKS",
+    "line": 6,
+    "column": 11,
+    "end_column": 16
+   },
+   {
+    "type": "SEMICOLON",
+    "category": "SEMICOLON",
+    "lexeme": ";",
+    "value": null,
+    "line": 6,
+    "column": 16,
+    "end_column": 17
+   },
+   {
+    "type": "SORT",
+    "category": "KEYWORD",
+    "lexeme": "SORT",
+    "value": "SORT",
+    "line": 7,
+    "column": 1,
+    "end_column": 5
+   },
+   {
+    "type": "IDENTIFIER",
+    "category": "IDENTIFIER",
+    "lexeme": "MARKS",
+    "value": "MARKS",
+    "line": 7,
+    "column": 6,
+    "end_column": 11
+   },
+   {
+    "type": "DESC",
+    "category": "KEYWORD",
+    "lexeme": "DESC",
+    "value": "DESC",
+    "line": 7,
+    "column": 12,
+    "end_column": 16
+   },
+   {
+    "type": "SEMICOLON",
+    "category": "SEMICOLON",
+    "lexeme": ";",
+    "value": null,
+    "line": 7,
+    "column": 16,
+    "end_column": 17
+   },
+   {
+    "type": "SAVE",
+    "category": "KEYWORD",
+    "lexeme": "SAVE",
+    "value": "SAVE",
+    "line": 8,
+    "column": 1,
+    "end_column": 5
+   },
+   {
+    "type": "STRING",
+    "category": "STRING",
+    "lexeme": "\"cleaned_students.csv\"",
+    "value": "cleaned_students.csv",
+    "line": 8,
+    "column": 6,
+    "end_column": 28
+   },
+   {
+    "type": "SEMICOLON",
+    "category": "SEMICOLON",
+    "lexeme": ";",
+    "value": null,
+    "line": 8,
+    "column": 28,
+    "end_column": 29
+   },
+   {
+    "type": "EOF",
+    "category": "EOF",
+    "lexeme": "",
+    "value": null,
+    "line": 9,
+    "column": 1,
+    "end_column": 1
+   }
+  ],
+  "ast": {
+   "node": "Program",
+   "load": {
+    "node": "LoadStatement",
+    "filename": "students.csv",
+    "span": {
+     "line": 1,
+     "column": 1,
+     "end_column": 5
+    }
+   },
+   "transforms": [
+    {
+     "node": "FillNullsStatement",
+     "column": {
+      "node": "ColumnRef",
+      "name": "AGE",
+      "quoted": false,
+      "span": {
+       "line": 2,
+       "column": 12,
+       "end_column": 15
+      }
+     },
+     "strategy": "MEDIAN",
+     "span": {
+      "line": 2,
+      "column": 1,
+      "end_column": 11
+     }
+    },
+    {
+     "node": "FillNullsStatement",
+     "column": {
+      "node": "ColumnRef",
+      "name": "MARKS",
+      "quoted": false,
+      "span": {
+       "line": 3,
+       "column": 12,
+       "end_column": 17
+      }
+     },
+     "strategy": "MEAN",
+     "span": {
+      "line": 3,
+      "column": 1,
+      "end_column": 11
+     }
+    },
+    {
+     "node": "RemoveDuplicatesStatement",
+     "span": {
+      "line": 4,
+      "column": 1,
+      "end_column": 18
+     }
+    },
+    {
+     "node": "FilterStatement",
+     "column": {
+      "node": "ColumnRef",
+      "name": "AGE",
+      "quoted": false,
+      "span": {
+       "line": 5,
+       "column": 8,
+       "end_column": 11
+      }
+     },
+     "operator": ">=",
+     "literal": {
+      "node": "Literal",
+      "value": 18,
+      "kind": "number",
+      "span": {
+       "line": 5,
+       "column": 15,
+       "end_column": 17
+      }
+     },
+     "span": {
+      "line": 5,
+      "column": 1,
+      "end_column": 7
+     }
+    },
+    {
+     "node": "NormalizeStatement",
+     "column": {
+      "node": "ColumnRef",
+      "name": "MARKS",
+      "quoted": false,
+      "span": {
+       "line": 6,
+       "column": 11,
+       "end_column": 16
+      }
+     },
+     "span": {
+      "line": 6,
+      "column": 1,
+      "end_column": 10
+     }
+    },
+    {
+     "node": "SortStatement",
+     "column": {
+      "node": "ColumnRef",
+      "name": "MARKS",
+      "quoted": false,
+      "span": {
+       "line": 7,
+       "column": 6,
+       "end_column": 11
+      }
+     },
+     "direction": "DESC",
+     "span": {
+      "line": 7,
+      "column": 1,
+      "end_column": 5
+     }
+    }
+   ],
+   "save": {
+    "node": "SaveStatement",
+    "filename": "cleaned_students.csv",
+    "span": {
+     "line": 8,
+     "column": 1,
+     "end_column": 5
+    }
+   }
+  },
+  "semantic": {
+   "trace": [
+    {
+     "statement": "LOAD",
+     "line": 1,
+     "schema": [
+      {
+       "name": "STUDENT_NAME",
+       "type": "string",
+       "has_nulls": false
+      },
+      {
+       "name": "AGE",
+       "type": "integer",
+       "has_nulls": true
+      },
+      {
+       "name": "MARKS",
+       "type": "integer",
+       "has_nulls": true
+      }
+     ]
+    },
+    {
+     "statement": "FILL_NULLS",
+     "line": 2,
+     "status": "ok",
+     "schema": [
+      {
+       "name": "STUDENT_NAME",
+       "type": "string",
+       "has_nulls": false
+      },
+      {
+       "name": "AGE",
+       "type": "integer",
+       "has_nulls": false
+      },
+      {
+       "name": "MARKS",
+       "type": "integer",
+       "has_nulls": true
+      }
+     ]
+    },
+    {
+     "statement": "FILL_NULLS",
+     "line": 3,
+     "status": "ok",
+     "schema": [
+      {
+       "name": "STUDENT_NAME",
+       "type": "string",
+       "has_nulls": false
+      },
+      {
+       "name": "AGE",
+       "type": "integer",
+       "has_nulls": false
+      },
+      {
+       "name": "MARKS",
+       "type": "integer",
+       "has_nulls": false
+      }
+     ]
+    },
+    {
+     "statement": "REMOVE_DUPLICATES",
+     "line": 4,
+     "status": "ok",
+     "schema": [
+      {
+       "name": "STUDENT_NAME",
+       "type": "string",
+       "has_nulls": false
+      },
+      {
+       "name": "AGE",
+       "type": "integer",
+       "has_nulls": false
+      },
+      {
+       "name": "MARKS",
+       "type": "integer",
+       "has_nulls": false
+      }
+     ]
+    },
+    {
+     "statement": "FILTER",
+     "line": 5,
+     "status": "ok",
+     "schema": [
+      {
+       "name": "STUDENT_NAME",
+       "type": "string",
+       "has_nulls": false
+      },
+      {
+       "name": "AGE",
+       "type": "integer",
+       "has_nulls": false
+      },
+      {
+       "name": "MARKS",
+       "type": "integer",
+       "has_nulls": false
+      }
+     ]
+    },
+    {
+     "statement": "NORMALIZE",
+     "line": 6,
+     "status": "ok",
+     "schema": [
+      {
+       "name": "STUDENT_NAME",
+       "type": "string",
+       "has_nulls": false
+      },
+      {
+       "name": "AGE",
+       "type": "integer",
+       "has_nulls": false
+      },
+      {
+       "name": "MARKS",
+       "type": "float",
+       "has_nulls": false
+      }
+     ]
+    },
+    {
+     "statement": "SORT",
+     "line": 7,
+     "status": "ok",
+     "schema": [
+      {
+       "name": "STUDENT_NAME",
+       "type": "string",
+       "has_nulls": false
+      },
+      {
+       "name": "AGE",
+       "type": "integer",
+       "has_nulls": false
+      },
+      {
+       "name": "MARKS",
+       "type": "float",
+       "has_nulls": false
+      }
+     ]
+    },
+    {
+     "statement": "SAVE",
+     "line": 8,
+     "schema": [
+      {
+       "name": "STUDENT_NAME",
+       "type": "string",
+       "has_nulls": false
+      },
+      {
+       "name": "AGE",
+       "type": "integer",
+       "has_nulls": false
+      },
+      {
+       "name": "MARKS",
+       "type": "float",
+       "has_nulls": false
+      }
+     ]
+    }
+   ]
+  },
+  "ir": {
+   "version": 1,
+   "input": "students.csv",
+   "output": "cleaned_students.csv",
+   "instructions": [
+    {
+     "index": 0,
+     "op": "fill_nulls",
+     "column": "AGE",
+     "strategy": "MEDIAN",
+     "source": {
+      "line": 2,
+      "column": 1
+     }
+    },
+    {
+     "index": 1,
+     "op": "fill_nulls",
+     "column": "MARKS",
+     "strategy": "MEAN",
+     "source": {
+      "line": 3,
+      "column": 1
+     }
+    },
+    {
+     "index": 2,
+     "op": "remove_duplicates",
+     "source": {
+      "line": 4,
+      "column": 1
+     }
+    },
+    {
+     "index": 3,
+     "op": "filter_rows",
+     "column": "AGE",
+     "operator": ">=",
+     "value": 18,
+     "source": {
+      "line": 5,
+      "column": 1
+     }
+    },
+    {
+     "index": 4,
+     "op": "normalize",
+     "column": "MARKS",
+     "source": {
+      "line": 6,
+      "column": 1
+     }
+    },
+    {
+     "index": 5,
+     "op": "sort_rows",
+     "column": "MARKS",
+     "direction": "DESC",
+     "source": {
+      "line": 7,
+      "column": 1
+     }
+    }
+   ]
+  },
+  "generated_code": "# Generated by the CleanScript compiler from validated IR.\n# CleanScript itself runs the IR through a restricted interpreter with the same\n# semantics; this script is the equivalent Pandas program, shown for inspection.\nimport pandas as pd\n\n# LOAD 'students.csv' (the managed upload for this session)\ndf = pd.read_csv('students.csv', dtype_backend='numpy_nullable')\n\n# [1] FILL_NULLS 'AGE' USING MEDIAN  (line 2)\nif df['AGE'].isna().all():\n    raise ValueError(\"FILL_NULLS: column 'AGE' has no non-null values\")\nfill_value = df['AGE'].median()\nif pd.api.types.is_integer_dtype(df['AGE']) and not float(fill_value).is_integer():\n    df['AGE'] = df['AGE'].astype('Float64')\ndf['AGE'] = df['AGE'].fillna(fill_value)\n\n# [2] FILL_NULLS 'MARKS' USING MEAN  (line 3)\nif df['MARKS'].isna().all():\n    raise ValueError(\"FILL_NULLS: column 'MARKS' has no non-null values\")\nfill_value = df['MARKS'].mean()\nif pd.api.types.is_integer_dtype(df['MARKS']) and not float(fill_value).is_integer():\n    df['MARKS'] = df['MARKS'].astype('Float64')\ndf['MARKS'] = df['MARKS'].fillna(fill_value)\n\n# [3] REMOVE_DUPLICATES  (line 4)\ndf = df.drop_duplicates(keep='first')\n\n# [4] FILTER 'AGE' >= 18  (line 5)\ndf = df[df['AGE'].notna() & (df['AGE'] >= 18)]  # nulls never match\n\n# [5] NORMALIZE 'MARKS'  (line 6)\nif df['MARKS'].isna().all():\n    raise ValueError(\"NORMALIZE: column 'MARKS' has no non-null values\")\nvalues = df['MARKS'].astype('Float64')\ncol_min, col_max = values.min(), values.max()\nif col_max == col_min:\n    df['MARKS'] = values.where(values.isna(), 0.0)  # constant column -> 0.0\nelse:\n    df['MARKS'] = (values - col_min) / (col_max - col_min)\n\n# [6] SORT 'MARKS' DESC  (line 7)\ndf = df.sort_values('MARKS', ascending=False, kind='stable', na_position='last')\n\n# SAVE 'cleaned_students.csv'\ndf.to_csv('cleaned_students.csv', index=False, lineterminator='\\n')\n",
+  "diagnostics": []
+ },
+ "execute": {
+  "status": "success",
+  "session_id": "gcQjGYDoSqNk5ZFyxHnDQMCK",
+  "compilation_id": "54xewxY-a8RdF7nL",
+  "result_id": "odVZseRNP5Zt9BoR",
+  "output_filename": "cleaned_students.csv",
+  "operations": [
+   {
+    "index": 0,
+    "op": "fill_nulls",
+    "source": {
+     "line": 2,
+     "column": 1
+    },
+    "rows_before": 6,
+    "columns_before": 3,
+    "status": "ok",
+    "rows_after": 6,
+    "columns_after": 3,
+    "duration_ms": 0.327,
+    "cells_changed": 1,
+    "fill_value": 20.0
+   },
+   {
+    "index": 1,
+    "op": "fill_nulls",
+    "source": {
+     "line": 3,
+     "column": 1
+    },
+    "rows_before": 6,
+    "columns_before": 3,
+    "status": "ok",
+    "rows_after": 6,
+    "columns_after": 3,
+    "duration_ms": 0.214,
+    "cells_changed": 1,
+    "fill_value": 86.0
+   },
+   {
+    "index": 2,
+    "op": "remove_duplicates",
+    "source": {
+     "line": 4,
+     "column": 1
+    },
+    "rows_before": 6,
+    "columns_before": 3,
+    "status": "ok",
+    "rows_after": 5,
+    "columns_after": 3,
+    "duration_ms": 0.5,
+    "rows_removed": 1
+   },
+   {
+    "index": 3,
+    "op": "filter_rows",
+    "source": {
+     "line": 5,
+     "column": 1
+    },
+    "rows_before": 5,
+    "columns_before": 3,
+    "status": "ok",
+    "rows_after": 4,
+    "columns_after": 3,
+    "duration_ms": 0.445,
+    "rows_removed": 1
+   },
+   {
+    "index": 4,
+    "op": "normalize",
+    "source": {
+     "line": 6,
+     "column": 1
+    },
+    "rows_before": 4,
+    "columns_before": 3,
+    "status": "ok",
+    "rows_after": 4,
+    "columns_after": 3,
+    "duration_ms": 0.511,
+    "cells_changed": 4,
+    "min": 75.0,
+    "max": 90.0
+   },
+   {
+    "index": 5,
+    "op": "sort_rows",
+    "source": {
+     "line": 7,
+     "column": 1
+    },
+    "rows_before": 4,
+    "columns_before": 3,
+    "status": "ok",
+    "rows_after": 4,
+    "columns_after": 3,
+    "duration_ms": 0.247,
+    "order_changed": true
+   }
+  ],
+  "warnings": [],
+  "error": null,
+  "before": {
+   "rows": 6,
+   "columns": 3
+  },
+  "after": {
+   "rows": 4,
+   "columns": 3
+  },
+  "result_profile": {
+   "rows": 4,
+   "columns": 3,
+   "schema": [
+    {
+     "name": "STUDENT_NAME",
+     "type": "string",
+     "dtype": "string",
+     "missing": 0,
+     "missing_pct": 0.0,
+     "unique": 4,
+     "stats": null
+    },
+    {
+     "name": "AGE",
+     "type": "integer",
+     "dtype": "Int64",
+     "missing": 0,
+     "missing_pct": 0.0,
+     "unique": 3,
+     "stats": {
+      "min": 19,
+      "max": 22,
+      "mean": 20.25,
+      "median": 20.0
+     }
+    },
+    {
+     "name": "MARKS",
+     "type": "float",
+     "dtype": "Float64",
+     "missing": 0,
+     "missing_pct": 0.0,
+     "unique": 4,
+     "stats": {
+      "min": 0.0,
+      "max": 1.0,
+      "mean": 0.6,
+      "median": 0.7
+     }
+    }
+   ],
+   "missing_cells": 0,
+   "duplicate_rows": 0,
+   "warnings": [],
+   "preview": {
+    "columns": [
+     "STUDENT_NAME",
+     "AGE",
+     "MARKS"
+    ],
+    "rows": [
+     [
+      "Diya",
+      19,
+      1.0
+     ],
+     [
+      "Kabir",
+      22,
+      0.7333333333333333
+     ],
+     [
+      "Aarav",
+      20,
+      0.6666666666666666
+     ],
+     [
+      "Rohan",
+      20,
+      0.0
+     ]
+    ],
+    "total_rows": 4,
+    "truncated": false
+   }
+  }
+ }
+}

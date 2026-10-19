@@ -1,0 +1,17 @@
+Employee ID,Full Name,Department,Age,Salary,Joining Year,City,Status,Rating,Mode,Remarks,Country,Score Text
+E001,Ananya Iyer,Engineering,29,85000,2019,Bengaluru,ACTIVE,4.5,Remote,,India,88
+E002,"Sharma, Ravi",Sales,35,62000,2015,Mumbai,ACTIVE,3.8,Office,,India,72
+E003,Zoë Fernandes,,41,,2012,Pune,ON LEAVE,4.1,Hybrid,,India,N/A
+E004,Kabir Mehta,Engineering,,91000,2020,Bengaluru,ACTIVE,,Remote,,India,91
+E005,Meera Nair,HR,23,41000,2023,,ACTIVE,3.2,Office,,India,65
+E002,"Sharma, Ravi",Sales,35,62000,2015,Mumbai,ACTIVE,3.8,Office,,India,72
+E006,José D'Souza,Finance,52,120000,2005,Mumbai,INACTIVE,4.9,Office,,India,95
+E007,Isha Gupta,Engineering,31,,2018,Delhi,ACTIVE,4.0,,,India,80
+E008,Arjun Rao,Sales,17,18000,2024,Delhi,ACTIVE,2.9,Office,,India,55
+E009,Vihaan Singh,,27,58000,2021,Pune,ACTIVE,3.6,Hybrid,,India,missing
+E010,Anaya Das,Finance,,73000,2017,Kolkata,ACTIVE,4.4,Remote,,India,84
+E011,Rohan Kulkarni,Engineering,38,99000,2014,,INACTIVE,,Hybrid,,India,79
+E005,Meera Nair,HR,23,41000,2023,,ACTIVE,3.2,Office,,India,65
+E012,Diya Kapoor,HR,45,67000,2010,Delhi,ACTIVE,3.9,Office,,India,77
+E013,Aarav Joshi,Engineering,26,78000,2022,Bengaluru,ON LEAVE,4.2,Remote,,India,86
+E014,Sara Khan,Sales,33,,2016,Mumbai,ACTIVE,3.5,,,India,70
